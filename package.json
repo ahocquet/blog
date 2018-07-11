@@ -1,11 +1,8 @@
 {
-  "name": "devblog",
-  "description": "GatsbyJS blog template for developers",
+  "name": "blog",
+  "description": "My attempt to blog",
   "version": "1.0.0",
-  "author": "Ryan Fitzgerald <ryanfitzgeralddev@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/ryanfitzgerald/devblog/issues"
-  },
+  "author": "Anthony Hocquet <anthony@hocquet.fr>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^1.8.12",
@@ -34,19 +31,6 @@
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "prettier": "^1.6.1"
-  },
-  "homepage": "https://github.com/ryanfitzgerald/devblog#readme",
-  "keywords": [
-    "gatsby",
-    "dev",
-    "blog",
-    "dev blog"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryanfitzgerald/devblog.git"
   },
   "scripts": {
     "dev": "gatsby develop",

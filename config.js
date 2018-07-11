@@ -7,7 +7,7 @@ module.exports = {
   showShareButtons: true,
   postsPerPage: 5, // Required
   social: {
-    // website: 'https://ryanfitzgerald.ca',
+    // website: 'https://hocquet.fr',
     github: 'https://github.com/ahocquet',
     twitter: 'https://twitter.com/anthonyhocquet',
     linkedin: 'https://www.linkedin.com/in/hocquet/'

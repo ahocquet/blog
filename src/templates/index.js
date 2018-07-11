@@ -13,7 +13,7 @@ const IndexPage = ({ pathContext }) => {
   const nextUrl = (index + 1).toString();
   return (
     <Container>
-      <Helmet title={`${userConfig.title} | ${userConfig.author}`} />
+      <Helmet title={`${userConfig.author}`} />
       {group.map(({ node }) => (
         <Card key={node.fields.slug}>
           <Summary 
