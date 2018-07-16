@@ -2,6 +2,7 @@
 title: "Migrations EF Core depuis Octopus"
 date: "2018-07-16"
 author: 'Anthony HOCQUET / Fabrice Michellonet'
+featuredImage: './featuredImage.png'
 published: true
 ---
 

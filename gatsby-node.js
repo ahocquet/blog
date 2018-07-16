@@ -28,17 +28,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     title
                     date(formatString: "MMMM D, YYYY")
-                    # featuredImage {
-                    #   childImageSharp {
-                    #     sizes(maxWidth: 850) {
-                    #       base64
-                    #       aspectRatio
-                    #       src
-                    #       srcSet
-                    #       sizes
-                    #     }
-                    #   }
-                    # }
+                    featuredImage {
+                      childImageSharp {
+                        sizes(maxWidth: 850) {
+                          base64
+                          aspectRatio
+                          src
+                          srcSet
+                          sizes
+                        }
+                      }
+                    }
                   }
                 }
               }
