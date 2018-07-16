@@ -1,5 +1,6 @@
 import React from 'react';
 import 'prismjs/themes/prism.css';
+import "prismjs/themes/prism-solarizedlight.css";
 import '../global-styles';
 import userConfig from '../../config';
 
