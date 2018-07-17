@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://hocquet.netlify.com/* https://hocquet.fr/:splat 301!
