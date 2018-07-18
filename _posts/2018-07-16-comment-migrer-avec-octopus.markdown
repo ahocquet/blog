@@ -1,14 +1,11 @@
 ---
 layout: single
 title:  "Migrations EF Core depuis Octopus"
-# date:   2018-07-16 12:33:20 +0200
+date:   2018-07-16 12:33:20 +0200
 comments: true
-featuredImage: '/assets/images/comment-migrer-avec-octopus/featuredImage.png'
-# categories: jekyll update
+tags: octopus efcore
 ---
 
-
-# Contexte
 Ca vous est déjà arrivé de passer en prod une nouvelle version de votre  app et d'oublier de faire la migration EF à la mano ? Eh ben moi aussi. On se retrouve alors à passer le script de migration en urgence, en espérant que tout se passera bien. Bref, c'est la panique à bord.
 
 Histoire de ne plus revivre cette situation inconfortable, on est tenté d'avoir recours à la migration EF par le code. Ainsi, on est certains qu'a chaque exécution de notre app, la migration sera effectuée si le schéma de la BDD n'est pas à jour. Le problème, c'est que si la migration se passe mal, on se retrouve à nouveau avec une application plantée en production &rarr; retour à la case départ.
@@ -53,13 +50,13 @@ Maintenant que nous savons jouer une migration en CLI, la migration depuis Octop
 
 A titre d'exemple, on va se baser sur le déploiement d'une webapp Azure et donc du template Octopus [Deploy an Azure Web App](https://octopus.com/docs/deployment-examples/azure-deployments/deploying-a-package-to-an-azure-web-app#DeployingapackagetoanAzureWebApp-Step4:ConfigureyourAzureWebAppstep) :
 
-![Deploy OCtopus](/assets/images/comment-migrer-avec-octopus/deploy-azure-webapp.png)
+![Deploy OCtopus](/assets/images/comment-migrer-avec-octopus/deploy-azure-webapp.png){: .align-center}
 
 Dans ce template, il est possible de renseigner un script PowerShell à exécuter en Pre-Deploy/Deploy/Post-Deploy. On va s'intéresser à la mise en place du script _pendant_ le deploy. Si on le fait trop tôt, on ne pourra pas profiter de la valorisation des variables dans notre `appsettings.json`.
 
 Il nous suffit juste de recopier la ligne de commande précédemment mentionnée dans la section __Features / Configuration Scripts__ et c'est tout bon :
 
-![Octopus Custom Script](/assets/images/comment-migrer-avec-octopus/octopus-custom-script.png)
+[![Octopus Custom Script](/assets/images/comment-migrer-avec-octopus/octopus-custom-script.png){: .align-center}](/assets/images/comment-migrer-avec-octopus/octopus-custom-script.png)
 
 L'intérêt de cette approche est de mettre en évidence un problème de base de données rapidement, et surtout avant que votre webapp soit en ligne. [Fail Fast!](https://en.wikipedia.org/wiki/Fail-fast) Dans notre cas, si la migration échoue dans Octopus, alors ce dernier ne poursuivra pas le déploiement. 
 
