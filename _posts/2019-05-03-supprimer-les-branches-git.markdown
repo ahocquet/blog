@@ -1,12 +1,12 @@
 ---
 layout: single
-title:  "Comment pruner les branches Git en local"
+title:  "Comment supprimer les branches locales de Git sous Windows"
 date:   2019-05-03 09:00:00 +0200
 comments: true
 tags: git powershell devops
 ---
 
-Lorsque ca fait longtemps que vous bossez sur un repo, il est fort probable que vous vous retrouviez avec de nombreuses de `branch` en local qui n'existent plus sur le `remote origin`. Voici comment faire le ménage sous Windows avec `PowerShell`.
+Lorsque ca fait longtemps que vous bossez sur un repo, il est fort probable que vous vous retrouviez avec de nombreuses de `branch` en locale qui n'existent plus sur le `remote origin`. Voici comment faire le ménage sous Windows avec `PowerShell`.
 
 Pour cela, vous aurez besoin d'installer :
 - `chocolatey` afin d'installer des packages rapidement & facilement
@@ -17,7 +17,7 @@ Pour cela, vous aurez besoin d'installer :
 C'est parti :
 ``` powershell
 choco install grep
-choco install grep --version 5.0.0
+choco install gawk --version 5.0.0
 ```
 
 
