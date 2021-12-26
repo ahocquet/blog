@@ -29,5 +29,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           external_repository: ahocquet/ahocquet.github.io
-          github_token: $env:PERSONAL_TOKEN
+          deploy_key: $env:PERSONAL_TOKEN
           publish_dir: ./public
