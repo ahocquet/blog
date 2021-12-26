@@ -1,7 +1,7 @@
 ---
 title: "Generate a locally trusted certificate"
 date: 2021-12-25T17:42:53+01:00
-draft: true
+draft: false
 ---
 
 ### Introduction
